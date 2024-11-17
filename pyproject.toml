@@ -1,0 +1,6 @@
+# If you need to specify the virtual environment's lib path for LSP or IDE integration:
+[tool.basedpyright]
+typeCheckingMode = "standard"
+extraPaths = [
+    "lib/python3.12/site-packages"
+]
