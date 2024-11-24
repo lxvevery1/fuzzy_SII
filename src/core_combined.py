@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from plt.plotting import plot_implication_methods, plot_input_sets, plot_output_sets
 
-f = open("config_1.json")
+f = open("config_combined.json")
 config = json.load(f)
 
 input_universe = np.arange(0, config["input_max"] + 1, 1)

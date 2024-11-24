@@ -1,0 +1,49 @@
+{
+    "input_name": "apples_eaten",
+    "input_max": 99,
+    "input_sets": {
+        "low": 20,
+        "medium": 50,
+        "high": 70
+    },
+    "output_name": "player_skill",
+    "output_max": 99,
+    "output_sets": {
+        "beginner": [0, 0, 25],
+        "intermediate": [15, 50, 85],
+        "expert": [70, 100, 100]
+    },
+    "rules": [
+        {
+            "antecedents": ["low"],
+            "consequent": "beginner"
+        },
+        {
+            "antecedents": ["medium"],
+            "consequent": "intermediate"
+        },
+        {
+            "antecedents": ["high"],
+            "consequent": "expert"
+        },
+        {
+            "antecedents": ["low", "medium"],
+            "consequent": "beginner"
+        },
+        {
+            "antecedents": ["medium", "high"],
+            "consequent": "intermediate"
+        },
+        {
+            "antecedents": ["low", "high"],
+            "consequent": "intermediate"
+        },
+        {
+            "antecedents": ["high", "high"],
+            "consequent": "expert"
+        }
+    ],
+  "example_inputs": {
+    "apples_eaten": 90
+  }
+}

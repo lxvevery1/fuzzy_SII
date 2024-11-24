@@ -1,0 +1,100 @@
+{
+    "inputs": {
+        "apples_eaten": {
+            "max": 50,
+            "sets": {
+                "low": [0, 0, 15],
+                "medium": [10, 25, 40],
+                "high": [30, 50, 50]
+            }
+        },
+        "time_between_apples": {
+            "max": 30,
+            "sets": {
+                "fast": [0, 0, 10],
+                "average": [5, 15, 25],
+                "slow": [20, 30, 30]
+            }
+        },
+        "average_lifetime": {
+            "max": 300,
+            "sets": {
+                "short": [0, 0, 100],
+                "medium": [50, 150, 250],
+                "long": [200, 300, 300]
+            }
+        }
+    },
+    "output": {
+        "name": "player_skill",
+        "max": 100,
+        "sets": {
+            "novice": [0, 0, 40],
+            "intermediate": [30, 50, 70],
+            "expert": [60, 100, 100]
+        }
+    },
+    "rules": [
+        {
+            "antecedents": {
+                "apples_eaten": "low",
+                "time_between_apples": "slow",
+                "average_lifetime": "short"
+            },
+            "consequent": "novice"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "medium",
+                "time_between_apples": "average",
+                "average_lifetime": "medium"
+            },
+            "consequent": "intermediate"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "high",
+                "time_between_apples": "fast",
+                "average_lifetime": "long"
+            },
+            "consequent": "expert"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "medium",
+                "time_between_apples": "fast",
+                "average_lifetime": "medium"
+            },
+            "consequent": "expert"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "low",
+                "time_between_apples": "average",
+                "average_lifetime": "medium"
+            },
+            "consequent": "novice"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "high",
+                "time_between_apples": "slow",
+                "average_lifetime": "medium"
+            },
+            "consequent": "intermediate"
+        },
+        {
+            "antecedents": {
+                "apples_eaten": "medium",
+                "time_between_apples": "average",
+                "average_lifetime": "long"
+            },
+            "consequent": "expert"
+        }
+    ],
+    "example_inputs": {
+        "apples_eaten": 25,
+        "time_between_apples": 12,
+        "average_lifetime": 180
+    }
+}
