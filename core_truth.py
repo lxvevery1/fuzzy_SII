@@ -1,9 +1,8 @@
-import json
-
-import matplotlib.pyplot as plt
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
+import matplotlib.pyplot as plt
+import json
 
 
 def load_config(file_path):
@@ -73,7 +72,7 @@ def evaluate(inputs, input_vars, rules, output_var):
 
 
 def main():
-    config = load_config("config_many.json")
+    config = load_config("config_one.json")
     input_vars = define_input_variables(config)
     output_var = define_output_variable(config)
     rules = define_rules(config, input_vars, output_var)
