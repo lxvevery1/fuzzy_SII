@@ -259,5 +259,5 @@ input("Нажмите любую клавишу, чтобы посмотреть
 output = rules_aggregation(correspondences_L, given)
 
 
-# input("Нажмите любую клавишу, чтобы посмотреть график...")
-# plt.plotting.plot_comparison_Q(correspondences_M, correspondences_L, A, B)
+input("Нажмите любую клавишу, чтобы посмотреть график...")
+plt.plotting.plot_comparison_Q(correspondences_M, correspondences_L, A, B)
